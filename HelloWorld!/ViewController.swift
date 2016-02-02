@@ -29,10 +29,13 @@ class ViewController: UIViewController {
    
         
         
+        
         if textName.text == "" {
             labelName.text = ""
         } else {
             labelName.text = "Привет, " + (textName.text)! + " !"
+            
+            
         }
         
             
@@ -41,6 +44,7 @@ class ViewController: UIViewController {
         
         
         if textAge.text == "" {
+            
             labelAge.text = ""
         } else {
             labelAge.text = "Вам " + (textAge.text)! + " лет"
@@ -72,10 +76,25 @@ class ViewController: UIViewController {
         labelStreet.text = ""
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    // Функция скрытия клавиатуры (tap)
+    func didTapView(){
         
+        self.view.endEditing(true)
+        
+    }
+    
+    override func viewDidLoad() {
+        
+        
+        super.viewDidLoad()
+        // Метод для скрытия клавиатуры (tap)
+        let tapRecognizer = UITapGestureRecognizer()
+        tapRecognizer.addTarget(self, action: "didTapView")
+        self.view.addGestureRecognizer(tapRecognizer)
+        
+        // Auth
         self.authenticateUser()
+        
         
         
     }
@@ -86,11 +105,12 @@ class ViewController: UIViewController {
     }
     
     
+    
     func authenticateUser()
     {
         let contex = LAContext()
         var error: NSError?
-        let reasonString = "Auth is needed you app"
+        let reasonString = "Введите пароль"
         
         if contex.canEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, error: &error) {
             
@@ -101,6 +121,8 @@ class ViewController: UIViewController {
                 {
                     print("AuthenticationSuccessful")
                 } else {
+                   
+                    
                     switch policyError!.code {
                     case LAError.SystemCancel.rawValue:
                         print("Authentication cancel by the system")
@@ -135,33 +157,13 @@ class ViewController: UIViewController {
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     func showPasswordAlert()
     {
-        let alertController = UIAlertController(title: "Touch ID Password", message: "Enter your password", preferredStyle: .Alert)
-        let defaultAction = UIAlertAction(title: "Ok", style: .Cancel)  { (action) -> Void in
+        let alertController = UIAlertController(title: "Touch ID", message: "Введите ваш пароль", preferredStyle: .Alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .Cancel)  { (action) -> Void in
             if let textField = alertController.textFields?.first as UITextField?
             {
-                if textField.text == "veasoftware"
+                if textField.text == "test"
                 {
                     print("Successfil")
                 } else {
@@ -172,8 +174,10 @@ class ViewController: UIViewController {
     
         alertController.addAction(defaultAction)
         alertController.addTextFieldWithConfigurationHandler { (textField) -> Void in
-            textField.placeholder = "Password"
+            textField.placeholder = "Пароль"
+            textField.textAlignment = NSTextAlignment.Center
             textField.secureTextEntry = true
+          //  textField.keyboardType = UIKeyboardType.NumberPad
             
         
         }
