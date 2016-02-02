@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 class ViewController: UIViewController {
+    
+    
+    
     
     @IBOutlet weak var textName: UITextField!
     @IBOutlet weak var textAge: UITextField!
@@ -70,14 +74,117 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.authenticateUser()
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+       
     }
+    
+    
+    func authenticateUser()
+    {
+        let contex = LAContext()
+        var error: NSError?
+        let reasonString = "Auth is needed you app"
+        
+        if contex.canEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, error: &error) {
+            
+            contex.evaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, localizedReason: reasonString, reply: {
+                (success, policyError) -> Void in
+                
+                if success
+                {
+                    print("AuthenticationSuccessful")
+                } else {
+                    switch policyError!.code {
+                    case LAError.SystemCancel.rawValue:
+                        print("Authentication cancel by the system")
+                    case LAError.UserCancel.rawValue:
+                        print("Authentication cancel by the user")
+                    case LAError.UserFallback.rawValue:
+                        print("User selected to enter password")
+                        NSOperationQueue.mainQueue().addOperationWithBlock( { () -> Void in
+                            self.showPasswordAlert()
+                        })
+                        
+                    default:
+                        print("Authentication failed")
+                        NSOperationQueue.mainQueue().addOperationWithBlock( { () -> Void in
+                            self.showPasswordAlert()
+                        })
+                    }
+                    
+                }
+                
+            })
+            
+        } else {
+            print(error?.localizedDescription)
+            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                self.showPasswordAlert()
+        })
+    }
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    func showPasswordAlert()
+    {
+        let alertController = UIAlertController(title: "Touch ID Password", message: "Enter your password", preferredStyle: .Alert)
+        let defaultAction = UIAlertAction(title: "Ok", style: .Cancel)  { (action) -> Void in
+            if let textField = alertController.textFields?.first as UITextField?
+            {
+                if textField.text == "veasoftware"
+                {
+                    print("Successfil")
+                } else {
+                    self.showPasswordAlert()
+                }
+            }
+    }
+    
+        alertController.addAction(defaultAction)
+        alertController.addTextFieldWithConfigurationHandler { (textField) -> Void in
+            textField.placeholder = "Password"
+            textField.secureTextEntry = true
+            
+        
+        }
+        
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
 
-
+    }
 }
+
+
+
+
 

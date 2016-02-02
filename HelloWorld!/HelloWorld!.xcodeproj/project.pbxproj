@@ -12,6 +12,7 @@
 		CC78564C1C602BDC0088D65C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC78564A1C602BDC0088D65C /* Main.storyboard */; };
 		CC78564E1C602BDC0088D65C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC78564D1C602BDC0088D65C /* Assets.xcassets */; };
 		CC7856511C602BDC0088D65C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC78564F1C602BDC0088D65C /* LaunchScreen.storyboard */; };
+		CCF803671C6051A80066D6F1 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF803661C6051A80066D6F1 /* LocalAuthentication.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		CC78564D1C602BDC0088D65C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC7856501C602BDC0088D65C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC7856521C602BDC0088D65C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCF803661C6051A80066D6F1 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCF803671C6051A80066D6F1 /* LocalAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +41,7 @@
 		CC78563A1C602BDC0088D65C = {
 			isa = PBXGroup;
 			children = (
+				CCF803661C6051A80066D6F1 /* LocalAuthentication.framework */,
 				CC7856451C602BDC0088D65C /* HelloWorld! */,
 				CC7856441C602BDC0088D65C /* Products */,
 			);
@@ -249,9 +253,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "HelloWorld!/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "home.HelloWorld-";
+				PRODUCT_BUNDLE_IDENTIFIER = dmitryal37;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -260,9 +266,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "HelloWorld!/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "home.HelloWorld-";
+				PRODUCT_BUNDLE_IDENTIFIER = dmitryal37;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -285,6 +293,7 @@
 				CC7856571C602BDC0088D65C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
