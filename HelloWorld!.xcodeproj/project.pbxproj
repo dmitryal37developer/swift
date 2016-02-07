@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90AB91D30267B61C657A894A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A32A99BC4F1BE5EC50623D3 /* Pods.framework */; };
 		CC7856471C602BDC0088D65C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7856461C602BDC0088D65C /* AppDelegate.swift */; };
 		CC7856491C602BDC0088D65C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7856481C602BDC0088D65C /* ViewController.swift */; };
 		CC78564C1C602BDC0088D65C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC78564A1C602BDC0088D65C /* Main.storyboard */; };
 		CC78564E1C602BDC0088D65C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC78564D1C602BDC0088D65C /* Assets.xcassets */; };
 		CC7856511C602BDC0088D65C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC78564F1C602BDC0088D65C /* LaunchScreen.storyboard */; };
+		CC8E913E1C66673E00DA093B /* TouchIDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8E913D1C66673E00DA093B /* TouchIDController.swift */; };
+		CC8E91441C668B8100DA093B /* TableViewSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8E91431C668B8100DA093B /* TableViewSettings.swift */; };
+		CCEBB4AA1C62E43D0020CA71 /* PasscodeLockConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEBB4A71C62E43D0020CA71 /* PasscodeLockConfiguration.swift */; };
+		CCEBB4AB1C62E43D0020CA71 /* PasscodeSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEBB4A81C62E43D0020CA71 /* PasscodeSettingsViewController.swift */; };
+		CCEBB4AC1C62E43D0020CA71 /* UserDefaultsPasscodeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEBB4A91C62E43D0020CA71 /* UserDefaultsPasscodeRepository.swift */; };
 		CCF803671C6051A80066D6F1 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF803661C6051A80066D6F1 /* LocalAuthentication.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		092CF9F395ECF6F816686476 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		2A32A99BC4F1BE5EC50623D3 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B90BC9553C573FD200CC670E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CC7856431C602BDC0088D65C /* HelloWorld!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HelloWorld!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC7856461C602BDC0088D65C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC7856481C602BDC0088D65C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -23,6 +32,11 @@
 		CC78564D1C602BDC0088D65C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC7856501C602BDC0088D65C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC7856521C602BDC0088D65C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC8E913D1C66673E00DA093B /* TouchIDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchIDController.swift; sourceTree = "<group>"; };
+		CC8E91431C668B8100DA093B /* TableViewSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewSettings.swift; sourceTree = "<group>"; };
+		CCEBB4A71C62E43D0020CA71 /* PasscodeLockConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeLockConfiguration.swift; sourceTree = "<group>"; };
+		CCEBB4A81C62E43D0020CA71 /* PasscodeSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeSettingsViewController.swift; sourceTree = "<group>"; };
+		CCEBB4A91C62E43D0020CA71 /* UserDefaultsPasscodeRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsPasscodeRepository.swift; sourceTree = "<group>"; };
 		CCF803661C6051A80066D6F1 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -32,18 +46,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCF803671C6051A80066D6F1 /* LocalAuthentication.framework in Frameworks */,
+				90AB91D30267B61C657A894A /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CC78563A1C602BDC0088D65C = {
+		3AAD1644F73757BCCB1AF5E1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				CCF803661C6051A80066D6F1 /* LocalAuthentication.framework */,
+				2A32A99BC4F1BE5EC50623D3 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4AB67A0BEA7824F55871A55B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				092CF9F395ECF6F816686476 /* Pods.debug.xcconfig */,
+				B90BC9553C573FD200CC670E /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CC78563A1C602BDC0088D65C = {
+			isa = PBXGroup;
+			children = (
 				CC7856451C602BDC0088D65C /* HelloWorld! */,
 				CC7856441C602BDC0088D65C /* Products */,
+				4AB67A0BEA7824F55871A55B /* Pods */,
+				3AAD1644F73757BCCB1AF5E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,12 +94,25 @@
 			children = (
 				CC7856461C602BDC0088D65C /* AppDelegate.swift */,
 				CC7856481C602BDC0088D65C /* ViewController.swift */,
+				CC8E913D1C66673E00DA093B /* TouchIDController.swift */,
+				CC8E91431C668B8100DA093B /* TableViewSettings.swift */,
 				CC78564A1C602BDC0088D65C /* Main.storyboard */,
 				CC78564D1C602BDC0088D65C /* Assets.xcassets */,
 				CC78564F1C602BDC0088D65C /* LaunchScreen.storyboard */,
 				CC7856521C602BDC0088D65C /* Info.plist */,
+				CCB0F9B71C62C90700EFF1DA /* Passcode */,
 			);
 			path = "HelloWorld!";
+			sourceTree = "<group>";
+		};
+		CCB0F9B71C62C90700EFF1DA /* Passcode */ = {
+			isa = PBXGroup;
+			children = (
+				CCEBB4A71C62E43D0020CA71 /* PasscodeLockConfiguration.swift */,
+				CCEBB4A81C62E43D0020CA71 /* PasscodeSettingsViewController.swift */,
+				CCEBB4A91C62E43D0020CA71 /* UserDefaultsPasscodeRepository.swift */,
+			);
+			name = Passcode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -75,9 +122,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC7856551C602BDC0088D65C /* Build configuration list for PBXNativeTarget "HelloWorld!" */;
 			buildPhases = (
+				E6F031E15181814EA8B976BA /* Check Pods Manifest.lock */,
 				CC78563F1C602BDC0088D65C /* Sources */,
 				CC7856401C602BDC0088D65C /* Frameworks */,
 				CC7856411C602BDC0088D65C /* Resources */,
+				FF9C0AF759533EA57EE0DA2E /* Embed Pods Frameworks */,
+				A1352CC825582F1EE4714979 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,13 +185,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A1352CC825582F1EE4714979 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6F031E15181814EA8B976BA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FF9C0AF759533EA57EE0DA2E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CC78563F1C602BDC0088D65C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCEBB4AC1C62E43D0020CA71 /* UserDefaultsPasscodeRepository.swift in Sources */,
 				CC7856491C602BDC0088D65C /* ViewController.swift in Sources */,
+				CCEBB4AB1C62E43D0020CA71 /* PasscodeSettingsViewController.swift in Sources */,
+				CC8E91441C668B8100DA093B /* TableViewSettings.swift in Sources */,
+				CCEBB4AA1C62E43D0020CA71 /* PasscodeLockConfiguration.swift in Sources */,
 				CC7856471C602BDC0088D65C /* AppDelegate.swift in Sources */,
+				CC8E913E1C66673E00DA093B /* TouchIDController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +353,7 @@
 		};
 		CC7856561C602BDC0088D65C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 092CF9F395ECF6F816686476 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "HelloWorld!/Info.plist";
@@ -263,6 +367,7 @@
 		};
 		CC7856571C602BDC0088D65C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B90BC9553C573FD200CC670E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "HelloWorld!/Info.plist";

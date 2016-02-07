@@ -80,7 +80,13 @@ class ViewController: UIViewController {
     }
    
     
+    
+    
+    
+    
     @IBAction func passcodeSwitchValueChange(sender: UISwitch) {
+        
+        
         
         let configuration = PasscodeLockConfiguration()
         
@@ -88,9 +94,14 @@ class ViewController: UIViewController {
         
         if passcodeSwitch.on {
             
-            passcodeVC = PasscodeLockViewController(state: .SetPasscode, configuration: configuration)
+        passcodeVC = PasscodeLockViewController(state: .SetPasscode, configuration: configuration)
+            
+            
+            
+            
             
         } else {
+            
             
            
             passcodeVC = PasscodeLockViewController(state: .RemovePasscode, configuration: configuration)
@@ -98,9 +109,8 @@ class ViewController: UIViewController {
             passcodeVC.successCallback = { lock in
                 
                 lock.repository.deletePasscode()
-                
-                
-            }
+                }
+            
         }
         
         presentViewController(passcodeVC, animated: true, completion: nil)
@@ -115,6 +125,8 @@ class ViewController: UIViewController {
         
     }
     
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let tapRecognizer = UITapGestureRecognizer()
@@ -122,6 +134,9 @@ class ViewController: UIViewController {
         tapRecognizer.addTarget(self, action: "didTapView")
         
         self.view.addGestureRecognizer(tapRecognizer)
+        
+        
+    
         
         }
     
